@@ -6,8 +6,7 @@ function ToDo (){
     const [currentItem, setCurrentItem] = useState(null);
     const [itemList, updateItemList] = useState([]);
     
-    const onChangeHAndler = (e) => {
-        console.log("Current Item:", e.target.value);
+    const onChangeHandler = (e) => {
         setCurrentItem(e.target.value);
     };
     
@@ -24,7 +23,7 @@ function ToDo (){
                   type="text"
                   value={currentItem}
                   placeholder="Enter item here..."
-                  onChange={onChangeHAndler}
+                  onChange={onChangeHandler}
                 />
                 <button onClick={addItemToList}>+</button>
             </div>
