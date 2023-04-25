@@ -2,16 +2,18 @@ import "../customStyle.css"
 
 function List(props){
     
+    const {itemList, updateItemList} =props;
+    
     const deleteItemFromList = key =>{
-        const newList = props.itemList.filter(itemObj => {
+        const newList = itemList.filter(itemObj => {
             return(itemObj.key !== key)
         });
-        props.updateItemList(newList);
+        updateItemList(newList);
     };
     
     return (
         <div>
-            {props.itemList.map(itemObj => {
+            {itemList.map(itemObj => {
                 return (
                     <div key={itemObj.key} className="item">
                         <p>{itemObj.item}</p>
